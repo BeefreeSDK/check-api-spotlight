@@ -17,4 +17,3 @@
 5. Send the response data to a component SmartCheckButton to render the results.
 6. Define `onHover`callback for suggestions and warnings.
 7. Define `onClick` callback for suggestions and warnings.
-8. Enable automatic checks to trigger validations as content is updated.

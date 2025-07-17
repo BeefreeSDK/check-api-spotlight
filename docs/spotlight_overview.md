@@ -1,32 +1,10 @@
-# Beefree SDK Check Overview
+# Beefree Check SDK API Overview
+
+You need the **Beefree SDK API KEY**
+
+<img src="sdk_api_key.png" alt="drawing" width="600"/>
 
 
-## Some notes
-- We’ll walk through a quick integration of the **Check API** into a demo project focusing on email checks for the main language.
-- This project will be shared as a public GitHub repository.
-- You need the **Beefree SDK API KEY** and the **Beefree SDK Plugin Client and Secret key**.
-- Please note: integrating the **Beefree SDK** is **not** part of today’s demo, but you can find examples and guides at [https://github.com/BeefreeSDK](https://github.com/BeefreeSDK).
-- We’ll be using **Next.js** to set up a proxy server, allowing us to make API calls from the same origin.
-- The **`@beefree/sdk`** package is our official NPM module for integrating the SDK into your projects.
-
-
-## Agenda
-
-#### Beefree SDK API
-- Endpoints
-- Checks
-- Example of request
-
-
-#### Application Demo
-- Make a request to the Check API with a single check.
-- Send the response data to a component to render the results.
-- Set up `onHover` handlers on suggestions and warnings.
-- Set up `onClick` handlers on suggestions and warnings.
-- Enable automatic checks to trigger validations as content is updated. (If we still have time)
-
-
-## Beefree SDK API Overview
 ### API Endpoints
 |                        |                   |
 | ---------------------- | ----------------- |
@@ -65,9 +43,20 @@ You create your list of checks!
 
 If warning and suggestion, the general status is warning.
 
-### Hands on code
-1. [Request Example](request_http/request_simple_template.http)
-2. Application Demo
+### Hands on request example
+
+[Request Example](request_http/request_simple_template.http)
+
+
+## Application Demo
 
 ## Stay tuned
 Other checks will be released and **we are open to define some of them with you**.
+
+## Some notes
+- We’ll walk through a quick integration of the **Check API** into a demo project focusing on email checks for the main language.
+- This project will be shared as a public GitHub repository.
+- You need the **Beefree SDK API KEY** and the **Beefree SDK Plugin Client and Secret key**.
+- Please note: integrating the **Beefree SDK** is **not** part of today’s demo, but you can find examples and guides at [https://github.com/BeefreeSDK](https://github.com/BeefreeSDK).
+- We’ll be using **Next.js** to set up a proxy server, allowing us to make API calls from the same origin.
+- The **`@beefree/sdk`** package is our official NPM module for integrating the SDK into your projects.

@@ -51,7 +51,7 @@ Just one note on secondary languages. The check works in incremental way:
 ### Available checks
  Complete details on https://docs.beefree.io/beefree-sdk/apis/content-services-api/check
 
-| Check code          | Short description                        | Check Type | For emails | For pages | For rows | Widgets checked                   |
+| Check code          | Short description                        | Severity   | For emails | For pages | For rows | Widgets checked                   |
 | ------------------- | ---------------------------------------- | ---------- | ---------- | --------- | -------- | --------------------------------- |
 | missingAltText      | Highlight missing Alt-text in images     | warning    | x          | x         | x        | gif, image, sticker, icon, social |
 | missingImageLink    | Highlight missing link on images         | suggestion | x          | x         | x        | gif, image, sticker, icon         |

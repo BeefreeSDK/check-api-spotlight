@@ -40,7 +40,7 @@ If warning and suggestion, the general status is warning.
 
 ### Hands on request example
 
-[Request Example](../request_http/request_simple_template.http)
+[Request Example](./request_http/request_simple_template.http)
 
 
 ## Stay tuned

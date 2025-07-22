@@ -1,0 +1,477 @@
+### It needs the REST Client extension for VS Code
+
+###  checks on the simple-template.json: 2 images, one with missing alt text and the weight of the second image is over the given KBs limit
+POST https://api.getbee.io/v1/message/check HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer <Content Service API Key>
+
+{
+  "checks": [
+    {"category":"missingAltText"},
+    {"category":"missingCopyLink"},
+    {"category":"missingImageLink"},
+    {"category":"overageHtmlWeight", "limit": 5},
+    {"category":"overageImageWeight", "limit": 500},
+    {"category":"missingDetailsEmail"}
+    ],
+  "template": {
+  "page": {
+    "body": {
+      "container": {
+        "style": {
+          "background-color": "#ffffff"
+        }
+      },
+      "content": {
+        "computedStyle": {
+          "linkColor": "#7747FF",
+          "messageBackgroundColor": "transparent",
+          "messageWidth": "730px"
+        },
+        "style": {
+          "color": "#000000",
+          "font-family": "'Roboto', Tahoma, Verdana, Segoe, sans-serif"
+        }
+      },
+      "type": "mailup-bee-page-properties",
+      "webFonts": [
+        {
+          "fontFamily": "'Roboto', Tahoma, Verdana, Segoe, sans-serif",
+          "name": "Roboto",
+          "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900"
+        }
+      ]
+    },
+    "description": "",
+    "rows": [
+      {
+        "columns": [
+          {
+            "grid-columns": 12,
+            "modules": [
+              {
+                "descriptor": {
+                  "computedStyle": {
+                    "hideContentOnDesktop": false,
+                    "hideContentOnMobile": false
+                  },
+                  "heading": {
+                    "style": {
+                      "color": "#000000",
+                      "direction": "ltr",
+                      "font-family": "'Roboto', Tahoma, Verdana, Segoe, sans-serif",
+                      "font-size": "38px",
+                      "font-weight": "400",
+                      "letter-spacing": "0px",
+                      "line-height": "120%",
+                      "link-color": "#7747FF",
+                      "text-align": "center"
+                    },
+                    "text": "<span class=\"tinyMce-placeholder\">I&#39;m a small image without an alt text</span>",
+                    "title": "h1"
+                  },
+                  "style": {
+                    "padding-bottom": "10px",
+                    "padding-left": "10px",
+                    "padding-right": "10px",
+                    "padding-top": "10px",
+                    "text-align": "center",
+                    "width": "100%"
+                  }
+                },
+                "locked": false,
+                "type": "mailup-bee-newsletter-modules-heading",
+                "uuid": "511c9b7c-c478-4852-baf5-8492d878ae69"
+              },
+              {
+                "descriptor": {
+                  "computedStyle": {
+                    "hideContentOnAmp": false,
+                    "hideContentOnDesktop": false,
+                    "hideContentOnHtml": false,
+                    "hideContentOnMobile": false
+                  },
+                  "paragraph": {
+                    "computedStyle": {
+                      "linkColor": "#7747FF",
+                      "paragraphSpacing": "16px"
+                    },
+                    "html": "<p>✅ Image size is correct</p>\n<p>❌ Alt Text is missing<a jsname=\"UWckNb\" href=\"https://emojipedia.org/cross-mark\" ping=\"/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://emojipedia.org/cross-mark&amp;ved=2ahUKEwjjr9Pg3JuOAxW69bsIHaznJ9EQFnoECBYQAQ\" style=\"text-decoration: underline;\"></a></p>\n<p>&nbsp;</p>",
+                    "style": {
+                      "color": "#101112",
+                      "direction": "ltr",
+                      "font-family": "'Roboto', Tahoma, Verdana, Segoe, sans-serif",
+                      "font-size": "16px",
+                      "font-weight": "400",
+                      "letter-spacing": "0px",
+                      "line-height": "120%",
+                      "text-align": "center"
+                    }
+                  },
+                  "style": {
+                    "padding-bottom": "10px",
+                    "padding-left": "10px",
+                    "padding-right": "10px",
+                    "padding-top": "10px"
+                  }
+                },
+                "locked": false,
+                "type": "mailup-bee-newsletter-modules-paragraph",
+                "uuid": "23bd2f4d-5721-499e-8eb6-bd0bd294b85e"
+              },
+              {
+                "descriptor": {
+                  "computedStyle": {
+                    "class": "center autowidth",
+                    "hideContentOnMobile": false,
+                    "width": "730px"
+                  },
+                  "image": {
+                    "alt": "",
+                    "height": "596px",
+                    "href": "test.com",
+                    "prefix": "",
+                    "src": "https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/zjiv70yf/vfl/vzm/5z8/61bDJJT2tbL._UF894%2C1000_QL80_.jpg",
+                    "target": "_blank",
+                    "width": "894px"
+                  },
+                  "style": {
+                    "border-radius": "0px",
+                    "padding-bottom": "0px",
+                    "padding-left": "0px",
+                    "padding-right": "0px",
+                    "padding-top": "0px",
+                    "width": "100%"
+                  }
+                },
+                "locked": false,
+                "type": "mailup-bee-newsletter-modules-image",
+                "uuid": "a64e6596-702c-420b-a766-710782f64b8d"
+              }
+            ],
+            "style": {
+              "background-color": "transparent",
+              "border-bottom": "0px solid transparent",
+              "border-left": "0px solid transparent",
+              "border-right": "0px solid transparent",
+              "border-top": "0px solid transparent",
+              "padding-bottom": "5px",
+              "padding-left": "0px",
+              "padding-right": "0px",
+              "padding-top": "5px"
+            },
+            "uuid": "e623bd17-e148-4e14-bacd-3ad4f56fb0d8"
+          }
+        ],
+        "container": {
+          "style": {
+            "background-color": "transparent",
+            "background-image": "none",
+            "background-position": "top left",
+            "background-repeat": "no-repeat"
+          }
+        },
+        "content": {
+          "computedStyle": {
+            "hideContentOnDesktop": false,
+            "hideContentOnMobile": false,
+            "rowColStackOnMobile": true,
+            "rowReverseColStackOnMobile": false,
+            "verticalAlign": "top"
+          },
+          "style": {
+            "background-color": "transparent",
+            "background-image": "none",
+            "background-position": "top left",
+            "background-repeat": "no-repeat",
+            "border-bottom": "0px solid transparent",
+            "border-left": "0px solid transparent",
+            "border-radius": "0px",
+            "border-right": "0px solid transparent",
+            "border-top": "0px solid transparent",
+            "color": "#000000",
+            "padding-bottom": "0px",
+            "padding-left": "0px",
+            "padding-right": "0px",
+            "padding-top": "0px",
+            "width": "730px"
+          }
+        },
+        "empty": false,
+        "locked": false,
+        "synced": false,
+        "type": "one-column-empty",
+        "uuid": "a68b86bb-be1c-4220-9034-ee6cb8688859"
+      },
+      {
+        "columns": [
+          {
+            "grid-columns": 12,
+            "modules": [
+              {
+                "descriptor": {
+                  "computedStyle": {
+                    "align": "center",
+                    "hideContentOnMobile": false
+                  },
+                  "divider": {
+                    "style": {
+                      "border-top": "6px solid #000000",
+                      "width": "100%"
+                    }
+                  },
+                  "style": {
+                    "padding-bottom": "50px",
+                    "padding-left": "10px",
+                    "padding-right": "10px",
+                    "padding-top": "50px"
+                  }
+                },
+                "locked": false,
+                "type": "mailup-bee-newsletter-modules-divider",
+                "uuid": "484d9b39-aaeb-4611-9d61-ecaad1ec893e"
+              },
+              {
+                "descriptor": {
+                  "computedStyle": {
+                    "hideContentOnDesktop": false,
+                    "hideContentOnMobile": false
+                  },
+                  "heading": {
+                    "style": {
+                      "color": "#000000",
+                      "direction": "ltr",
+                      "font-family": "'Roboto', Tahoma, Verdana, Segoe, sans-serif",
+                      "font-size": "38px",
+                      "font-weight": "400",
+                      "letter-spacing": "0px",
+                      "line-height": "120%",
+                      "link-color": "#7747FF",
+                      "text-align": "center"
+                    },
+                    "text": "<span class=\"tinyMce-placeholder\">I&#39;m a big image with an alt text</span>",
+                    "title": "h1"
+                  },
+                  "style": {
+                    "padding-bottom": "10px",
+                    "padding-left": "10px",
+                    "padding-right": "10px",
+                    "padding-top": "10px",
+                    "text-align": "center",
+                    "width": "100%"
+                  }
+                },
+                "locked": false,
+                "type": "mailup-bee-newsletter-modules-heading",
+                "uuid": "1ce9bbf5-3f6f-4736-a463-cff3e29bc77d"
+              },
+              {
+                "descriptor": {
+                  "computedStyle": {
+                    "hideContentOnAmp": false,
+                    "hideContentOnDesktop": false,
+                    "hideContentOnHtml": false,
+                    "hideContentOnMobile": false
+                  },
+                  "paragraph": {
+                    "computedStyle": {
+                      "linkColor": "#7747FF",
+                      "paragraphSpacing": "16px"
+                    },
+                    "html": "<p>❌ Image size is over the limit</p>\n<p>✅ Alt Text is correct</p>\n<p>&nbsp;</p>",
+                    "style": {
+                      "color": "#101112",
+                      "direction": "ltr",
+                      "font-family": "'Roboto', Tahoma, Verdana, Segoe, sans-serif",
+                      "font-size": "16px",
+                      "font-weight": "400",
+                      "letter-spacing": "0px",
+                      "line-height": "120%",
+                      "text-align": "center"
+                    }
+                  },
+                  "style": {
+                    "padding-bottom": "10px",
+                    "padding-left": "10px",
+                    "padding-right": "10px",
+                    "padding-top": "10px"
+                  }
+                },
+                "locked": false,
+                "type": "mailup-bee-newsletter-modules-paragraph",
+                "uuid": "3579d66c-36d6-46da-af8e-601c0ef30d6c"
+              },
+              {
+                "descriptor": {
+                  "computedStyle": {
+                    "class": "center autowidth",
+                    "hideContentOnMobile": false,
+                    "width": "730px"
+                  },
+                  "image": {
+                    "alt": "a landscape",
+                    "height": "896px",
+                    "href": "",
+                    "prefix": "",
+                    "src": "https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/zjiv70yf/39z/rc4/w6e/1751374777926.png",
+                    "target": "_blank",
+                    "width": "1152px"
+                  },
+                  "style": {
+                    "border-radius": "0px",
+                    "padding-bottom": "0px",
+                    "padding-left": "0px",
+                    "padding-right": "0px",
+                    "padding-top": "0px",
+                    "width": "100%"
+                  }
+                },
+                "locked": false,
+                "type": "mailup-bee-newsletter-modules-image",
+                "uuid": "1354cd78-3381-4eb6-ae84-fecd85de9a8e"
+              },
+              {
+                "type": "mailup-bee-newsletter-modules-social",
+                "descriptor": {
+                  "iconsList": {
+                    "icons": [
+                      {
+                        "type": "follow",
+                        "name": "Facebook",
+                        "image": {
+                          "prefix": "https://www.facebook.com/",
+                          "alt": "Facebook",
+                          "src": "https://qa-bee-app-rsrc.s3.amazonaws.com/public/resources/social-networks-icon-sets/circle-color/facebook@2x.png",
+                          "title": "Facebook",
+                          "href": "https://www.facebook.com/",
+                          "target": "_blank"
+                        },
+                        "text": "",
+                        "id": "facebook"
+                      },
+                      {
+                        "type": "follow",
+                        "name": "X",
+                        "image": {
+                          "prefix": "https://twitter.com/",
+                          "alt": "X",
+                          "src": "https://qa-bee-app-rsrc.s3.amazonaws.com/public/resources/social-networks-icon-sets/circle-color/twitter@2x.png",
+                          "title": "X",
+                          "href": "https://twitter.com/",
+                          "target": "_blank"
+                        },
+                        "text": "",
+                        "id": "x"
+                      },
+                      {
+                        "type": "follow",
+                        "name": "Instagram",
+                        "image": {
+                          "prefix": "https://instagram.com/",
+                          "alt": "Instagram",
+                          "src": "https://qa-bee-app-rsrc.s3.amazonaws.com/public/resources/social-networks-icon-sets/circle-color/instagram@2x.png",
+                          "title": "Instagram",
+                          "href": "https://instagram.com/",
+                          "target": "_blank"
+                        },
+                        "text": "",
+                        "id": "instagram"
+                      },
+                      {
+                        "type": "follow",
+                        "name": "LinkedIn",
+                        "image": {
+                          "prefix": "https://www.linkedin.com/",
+                          "alt": "LinkedIn",
+                          "src": "https://qa-bee-app-rsrc.s3.amazonaws.com/public/resources/social-networks-icon-sets/circle-color/linkedin@2x.png",
+                          "title": "LinkedIn",
+                          "href": "",
+                          "target": "_blank"
+                        },
+                        "text": "",
+                        "id": "linkedin"
+                      }
+                    ]
+                  },
+                  "style": {
+                    "text-align": "center",
+                    "padding-top": "10px",
+                    "padding-right": "10px",
+                    "padding-bottom": "10px",
+                    "padding-left": "10px"
+                  },
+                  "computedStyle": {
+                    "padding": "0 2.5px 0 2.5px",
+                    "iconsDefaultWidth": 32,
+                    "hideContentOnMobile": false,
+                    "width": 151,
+                    "height": 57
+                  },
+                  "mobileStyle": {}
+                },
+                "locked": false,
+                "uuid": "d2c9c2e1-aeab-4587-8e6e-10bfc0dece81"
+              }
+            ],
+            "style": {
+              "background-color": "transparent",
+              "border-bottom": "0px solid transparent",
+              "border-left": "0px solid transparent",
+              "border-right": "0px solid transparent",
+              "border-top": "0px solid transparent",
+              "padding-bottom": "5px",
+              "padding-left": "0px",
+              "padding-right": "0px",
+              "padding-top": "5px"
+            },
+            "uuid": "56119ad2-574d-4122-8dd1-c1152b5f4879"
+          }
+        ],
+        "container": {
+          "style": {
+            "background-color": "transparent",
+            "background-image": "none",
+            "background-position": "top left",
+            "background-repeat": "no-repeat"
+          }
+        },
+        "content": {
+          "computedStyle": {
+            "hideContentOnDesktop": false,
+            "hideContentOnMobile": false,
+            "rowColStackOnMobile": true,
+            "rowReverseColStackOnMobile": false,
+            "verticalAlign": "top"
+          },
+          "style": {
+            "background-color": "transparent",
+            "background-image": "none",
+            "background-position": "top left",
+            "background-repeat": "no-repeat",
+            "color": "#000000",
+            "width": "730px"
+          }
+        },
+        "empty": false,
+        "locked": false,
+        "synced": false,
+        "type": "one-column-empty",
+        "uuid": "0922fb70-f97e-4ae8-bcfe-0be9fd09a0d5"
+      }
+    ],
+    "template": {
+      "name": "template-base",
+      "type": "basic",
+      "version": "2.0.0"
+    },
+    "title": "",
+    "head": {
+      "meta": {
+        "subject": "asd"
+      }
+    }
+  },
+  "comments": {}
+}
+
+}

@@ -51,8 +51,11 @@ You get an `Error400 - Bad Request` if you ask for a check not available for tha
 Examples are on checks for emails on the main/default language.
 
 [Request example with a empty template](./request_http/request_base.http)
+
 [Request example with 2 checks and a simple template](./request_http/request_simple_template.http)
+
 [Request example with 6 checks and a simple template](./request_http/request_simple_template_all_tests.http)
+
 [Request example with a complex template](./request_http/request_complex_template.http)
 
 
